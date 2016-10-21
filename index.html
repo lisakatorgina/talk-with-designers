@@ -7,6 +7,9 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="screen.css">
 	<style type="text/css">
+		body {
+			font-size: 18px;
+		}
 		.slide .image-box {
 			width: 100%;
 			box-sizing: border-box;
@@ -65,6 +68,41 @@
 	<section class="slide">
 		<div class="image-box"><img src="pictures/i1.jpg" alt="" /></div>
 	</section>
+	<section class="slide shout"><div>
+		<h2>Семантика</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Тэги</h2>
+		<ul>
+			<li>
+				<code>div, span, header, footer, section</code>  - абстрактые обертки без дефолтных стилей
+			</li>
+			<li>
+				<code>h1-h6, p, ul, table, dl, fieldset</code> - cпецефическое оформление (абзац, список, таблица, список определений, блок с полями форм)
+			</li>
+			<li><code>a</code> - ссылки (aka гиперссылки)</li>
+			<li><code>input, select, textarea, button</code> - элементы форм</li>
+			<li><code>b, i, strong, small, em</code> - оформление текста</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Атрибуты</h2>
+		<ul>
+			<li>id</li>
+			<li>class</li>
+			<li>style</li>
+			<li>action, name, value, etc.</li>
+			<li>data-attr</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>BEM-семантика</h2>
+		<pre>
+			.block<br/>
+			&nbsp;&nbsp;.block__element<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;.block__element_mod
+		</pre>
+	</div></section>
 	<section class="slide"><div>
 		<h2>HTML</h2>
 		<img src="pictures/html.jpg" alt="" height="400">
@@ -180,6 +218,7 @@
 			<li class="next">постраничную прокрутку</li>
 			<li class="next">тяжелые макеты</li>
 			<li class="next">бардак в слоях (мусор, не скомпанованность, не информативные названия слоев и групп)</li>
+			<li class="next">когда с нами не советуются на этапе отрисовки и ставят перед фактом, что нужно реальзовать утвержденные макеты</li>
 		</ul>
 	</div></section>
 	<section class="slide"><div>
