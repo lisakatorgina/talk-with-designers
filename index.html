@@ -19,6 +19,12 @@
 		.slide .image-box img {
 			width: 100%;
 		}
+		.slide pre {
+			margin: 0 0 20px 0;
+		}
+		.slide p {
+			margin: 0 0 20px 0;
+		}
 		img {
 			transform: translateZ(0);
 		}
@@ -68,12 +74,84 @@
 	<section class="slide">
 		<div class="image-box"><img src="pictures/i1.jpg" alt="" /></div>
 	</section>
-	<section class="slide shout"><div>
-		<h2>Семантика</h2>
-	</div></section>
 	<section class="slide"><div>
 		<h2>Тэги</h2>
+		<pre>
+			<code>&lt;div&gt;</code>
+			<code>&nbsp;&nbsp;&lt;a href="http://www.dalee.ru/"&gt;отличные ребята&lt;/a&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+		<p><a href="http://www.dalee.ru/">отличные ребята</a></p>
+		<pre>
+			<code>&lt;input type="text" value="" placeholder="введите текст" /&gt;</code>
+		</pre>
+		<input type="text" placeholder="введите текст" />
+	</div></section>
+	<section class="slide"><div>
+		<h2>Блочные</h2>
+		<pre>
+			<code>&lt;div&gt;коробка&lt;/div&gt;</code>
+			<code>&lt;div&gt;ящик&lt;/div&gt;</code>
+			<code>&lt;div&gt;чемодан&lt;/div&gt;</code>
+		</pre>
+		<div style="border: 1px solid;">коробка</div>
+		<div style="border: 1px solid;">ящик</div>
+		<div style="border: 1px solid;">чемодан</div>
+		<br/>
+		<div style="border: 1px solid; padding: 5px;">
+			ящик
+			<div style="border: 1px solid;">чемодан</div>
+		</div>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Строчные</h2>
+		<pre>
+			<code>&lt;span&gt;вилка&lt;/span&gt;</code>
+			<code>&lt;span&gt;ложка&lt;/span&gt;</code>
+			<code>&lt;span&gt;тарелка&lt;/span&gt;</code>
+		</pre>
+		<span style="border: 1px solid;">вилка</span>
+		<span style="border: 1px solid;">ложка</span>
+		<span style="border: 1px solid;">тарелка</span>
+		<pre>
+			<code>&lt;span&gt;тарелка</code>
+			<code>&nbsp;&nbsp;&lt;span&gt;вилка&lt;/span&gt;</code>
+			<code>&lt;/span&gt;</code>
+		</pre>
+		<span style="border: 1px solid red;">тарелка<span style="border: 1px solid green;">вилка</span></span>
+	</div></section>
+	<section class="slide"><div>
+		<pre>
+			<code>&lt;div&gt;чемодан</code>
+			<code>&nbsp;&nbsp;&lt;span&gt;вилка&lt;/span&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+		<div style="border: 1px solid;">чемодан
+			<span style="border: 1px solid;">вилка</span>
+		</div>
+		<br/>
+		<pre>
+			<code>&lt;span&gt;вилка</code>
+			<code>&nbsp;&nbsp;&lt;div&gt;чемодан&lt;/div&gt;</code>
+			<code>&lt;/span&gt;</code>
+		</pre>
+		<span style="border: 1px solid;">вилка
+			<div style="border: 1px solid;">чемодан</div>
+		</span>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Инлайн-блочные</h2>
+		<pre>
+			<code>&lt;img src="dalee-logo.svg" /&gt;</code>
+			<code>&lt;img src="dalee-logo.svg" /&gt;</code>
+		</pre>
+		<img src="pictures/dalee-logo.svg">
+		<img src="pictures/dalee-logo.svg">
+	</div></section>
+	<section class="slide"><div>
 		<ul>
+			<li><code>html, body, head</code> - внешние</li>
+			<li><code>title, meta, link, script</code> - служебные</li>
 			<li>
 				<code>div, span, header, footer, section</code>  - абстрактые обертки без дефолтных стилей
 			</li>
@@ -81,27 +159,96 @@
 				<code>h1-h6, p, ul, table, dl, fieldset</code> - cпецефическое оформление (абзац, список, таблица, список определений, блок с полями форм)
 			</li>
 			<li><code>a</code> - ссылки (aka гиперссылки)</li>
+			<li><code>img, video, audio, svg — изображения и media</code>
 			<li><code>input, select, textarea, button</code> - элементы форм</li>
 			<li><code>b, i, strong, small, em</code> - оформление текста</li>
+			<li><code>br, hr</code> - форматирование</li>
 		</ul>
 	</div></section>
 	<section class="slide"><div>
 		<h2>Атрибуты</h2>
+		<pre>
+			<code>&lt;div class="box box_empty" id="box1" style="border: 1px solid;" &gt;коробка&lt;/div&gt;</code>
+			<code>&lt;img src="dalee-logo.svg" /&gt;</code>
+			<code>&lt;input type="text" value="" placeholder="введите текст" /&gt;</code>
+		</pre>
 		<ul>
 			<li>id</li>
 			<li>class</li>
 			<li>style</li>
 			<li>action, name, value, etc.</li>
 			<li>data-attr</li>
+			<li>src</li>
+			<li>title</li>
 		</ul>
 	</div></section>
 	<section class="slide"><div>
-		<h2>BEM-семантика</h2>
-		<pre>
-			.block<br/>
-			&nbsp;&nbsp;.block__element<br/>
-			&nbsp;&nbsp;&nbsp;&nbsp;.block__element_mod
+		<h2>CSS-селекторы</h2>
+		<pre>			
+			<code>&lt;div class="box box_empty" id="box1" style="border: 1px solid;" &gt;</code>
+			<code>&nbsp;&nbsp;&lt;span class="ball" &gt;&lt;/span&gt;</code>
+			<code>&lt;/div&gt;</code>
 		</pre>
+		<ul>
+			<li>div {} - выбор по тегу</li>
+			<li>#box1 {} - выбор по id</li>
+			<li>.box {} - выбор по классу</li>
+			<li>.box .ball {} - каскад</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>CSS-свойства</h2>
+		<ul>
+			<li><code>display</code> — модель отображения</li>
+			<li><code>position, float, margin</code> — поведение в потоке</li>
+			<li><code>width, height, padding, left, top, right, bottom</code> — размеры и расположение</li>
+			<li><code>font, color, text-shadow, text-align</code> — текст</li>
+			<li><code>border, border-radius, background, opacity, box-shadow, transform</code> — внешний вид и украшение</li>
+			<li><code>transition, animation</code> — анимация</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<pre>
+			<code>.box .ball {</code>
+			<code>&nbsp;&nbsp;display: block;</code>
+			<code>&nbsp;&nbsp;width: 150px;</code>
+			<code>&nbsp;&nbsp;height: 150px;</code>
+			<code>&nbsp;&nbsp;background: radial-gradient(circle farthest-corner at 60% 20%, #fff, #000);</code>
+			<code>&nbsp;&nbsp;border-radius: 50%;</code>
+			<code>&nbsp;&nbsp;transition: all 0.5s;</code>
+			<code>}</code>
+			<code>.box .ball:hover {</code>
+			<code>&nbsp;&nbsp;transform: scale(1.5);</code>
+			<code>}</code>
+		</pre>
+		<span class="next ball"></span>
+		<style type="text/css">
+			.ball {
+				display: block; 
+				width: 150px; 
+				height: 150px; 
+				border-radius: 50%; 
+				background: radial-gradient(circle farthest-corner at 60% 20%, #fff, #000);
+				transition: all 0.5s;
+				position: absolute;
+				right: 200px;
+				bottom: 100px;
+			}
+			.ball:hover {
+				transform: scale(1.5);
+			}
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Псевдоклассы и псевдоэлементы</h2>
+		<ul>
+			<li><code>:hover, :active</code></li>
+			<li><code>:disabled</code></li>
+			<li><code>:first-child, :last-child, :nth-child</code></li>
+			<li><code>:not</code></li> 
+			<li><code>:empty</code></li>
+		</ul>
+		<p><code>:before, :after</code></p>
 	</div></section>
 	<section class="slide"><div>
 		<h2>HTML</h2>
