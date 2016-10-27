@@ -19,13 +19,7 @@
 		.slide .image-box img {
 			width: 100%;
 		}
-		.slide pre {
-			margin: 0 0 20px 0;
-		}
-		.slide p {
-			margin: 0 0 20px 0;
-		}
-		.slide h2 {
+		.slide pre, .slide p, .slide h2, .slide ul {
 			margin: 0 0 20px 0;
 		}
 		img {
@@ -120,48 +114,6 @@
 		<a href="http://html5book.ru/html-tags/">http://html5book.ru/html-tags/</a>
 	</div></section>
 	<section class="slide"><div>
-		<h2>Блочные</h2>
-		<pre>
-			<code>&lt;div&gt;коробка&lt;/div&gt;</code>
-			<code>&lt;div&gt;ящик&lt;/div&gt;</code>
-			<code>&lt;div&gt;чемодан&lt;/div&gt;</code>
-		</pre>
-		<div style="border: 1px solid;">коробка</div>
-		<div style="border: 1px solid;">ящик</div>
-		<div style="border: 1px solid;">чемодан</div>
-		<br/>
-		<div style="border: 1px solid; padding: 5px;">
-			ящик
-			<div style="border: 1px solid;">чемодан</div>
-		</div>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Строчные</h2>
-		<pre>
-			<code>&lt;span&gt;вилка&lt;/span&gt;</code>
-			<code>&lt;span&gt;ложка&lt;/span&gt;</code>
-			<code>&lt;span&gt;тарелка&lt;/span&gt;</code>
-		</pre>
-		<span style="border: 1px solid;">вилка</span>
-		<span style="border: 1px solid;">ложка</span>
-		<span style="border: 1px solid;">тарелка</span>
-		<pre>
-			<code>&lt;span&gt;тарелка</code>
-			<code>&nbsp;&nbsp;&lt;span&gt;вилка&lt;/span&gt;</code>
-			<code>&lt;/span&gt;</code>
-		</pre>
-		<span style="border: 1px solid red;">тарелка<span style="border: 1px solid green;">вилка</span></span>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Инлайн-блочные</h2>
-		<pre>
-			<code>&lt;img src="dalee-logo.svg" /&gt;</code>
-			<code>&lt;img src="dalee-logo.svg" /&gt;</code>
-		</pre>
-		<img src="pictures/dalee-logo.svg">
-		<img src="pictures/dalee-logo.svg">
-	</div></section>
-	<section class="slide"><div>
 		<h2>Атрибуты</h2>
 		<pre>
 			<code>&lt;div class="box box_empty" id="box1" style="border: 1px solid;" &gt;коробка&lt;/div&gt;</code>
@@ -197,6 +149,65 @@
 			<li><code>border, border-radius, background, opacity, box-shadow, transform</code> — внешний вид и украшение</li>
 			<li><code>transition, animation</code> — анимация</li>
 		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Значения свойства display:</h2>
+		<ul>
+			<li><code>inline</code></li>
+			<li><code>block</code></li>
+			<li><code>inline-block</code></li>
+			<li><code>none</code></li>
+			<li><code>table (table-captio, table-cell, table-column, etc.)</code></li>
+			<li><code>flex</code></li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Блочные</h2>
+		<pre>
+			<code>&lt;div&gt;коробка&lt;/div&gt;</code>
+			<code>&lt;div&gt;ящик&lt;/div&gt;</code>
+			<code>&lt;div&gt;чемодан&lt;/div&gt;</code>
+		</pre>
+		<div style="border: 1px solid;">коробка</div>
+		<div style="border: 1px solid;">ящик</div>
+		<div style="border: 1px solid;">чемодан</div>
+		<br/>
+		<div style="border: 1px solid; padding: 5px;">
+			ящик
+			<div style="border: 1px solid;">чемодан</div>
+		</div>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Строчные</h2>
+		<pre>
+			<code>&lt;span&gt;вилка&lt;/span&gt;</code>
+			<code>&lt;span&gt;ложка&lt;/span&gt;</code>
+			<code>&lt;span&gt;тарелка&lt;/span&gt;</code>
+		</pre>
+		<span style="border: 1px solid;">вилка</span>
+		<span style="border: 1px solid;">ложка</span>
+		<span style="border: 1px solid;">тарелка</span>
+		<pre>
+			<code>&lt;span&gt;тарелка</code>
+			<code>&nbsp;&nbsp;&lt;span&gt;вилка&lt;/span&gt;</code>
+			<code>&lt;/span&gt;</code>
+		</pre>
+		<span style="border: 1px solid red;">тарелка<span style="border: 1px solid green;">вилка</span></span>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Инлайн-блочные и картинки</h2>
+		<pre>
+			<code>&lt;img src="dalee-logo.svg" /&gt;</code>
+			<code>&lt;textarea style="width: 200px; height: 100px;"&gt;Я всем доволен, спасибо!&lt;/textarea&gt;</code>
+			<code>&lt;input type="submit" value="отправить" /&gt;</code>
+		</pre>
+		<img src="pictures/dalee-logo.svg">
+		<textarea style="width: 200px; height: 100px;">Я всем доволен, спасибо</textarea>
+		<input type="submit" name="" value="отправить">
+	</div></section>
+	<section class="slide"><div>
+		<h2>Блочная модель</h2>
+		<img src="pictures/block-model.jpg" alt="" />
 	</div></section>
 	<section class="slide"><div>
 		<h2>CSS-селекторы</h2>
@@ -256,8 +267,15 @@
 			<li><code>:first-child, :last-child, :nth-child</code></li>
 			<li><code>:not</code></li> 
 			<li><code>:empty</code></li>
+			<li><code>:before, :after</code></li>
 		</ul>
-		<p><code>:before, :after</code></p>
+		<pre>
+			<code>&lt;span style="color: red;"&gt;Внимание&lt;/span&gt;</code>
+		</pre>
+		<pre>
+			<code>span:after {content: "!"; font-size: 2em;}</code>
+		</pre>
+		<span style="color: red;">Внимание<span style="font-size: 2em;">!</span></span>
 	</div></section>
 	<section class="slide"><div>
 		<h2>HTML</h2>
